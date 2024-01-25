@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .nav {
+            width: 500px;
+        }
+      .nav--con {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav--lists {
+        background-color: blue;
+        position: relative;
+        border: 1px solid black;
+      }
+
+      .nav--lists:hover .dropper { 
+        display: block;
+      }
+      .nav--links {
+        text-decoration: none;
+        color: black;
+      }
+
+      .dropper {
+        list-style: none;
+        /* background-color: brown; */
+        position: absolute;
+        display: none;
+      }
+      .dropper--lists:hover {
+        background-color: white;
+    }
+
+    .dropper--links {
+        text-decoration: none;
+        color: black;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul class="nav--con">
+        <li class="nav--lists">
+          <a href="" class="nav--links">lorem</a>
+          <ul class="dropper">
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav--lists">
+          <a href="" class="nav--links">lorem</a>
+          <ul class="dropper">
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav--lists">
+          <a href="" class="nav--links"
+            ><a href="" class="dropper--links">lorem</a></a
+          >
+          <ul class="dropper">
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+            <li class="dropper--lists">
+              <a href="" class="dropper--links">lorem</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

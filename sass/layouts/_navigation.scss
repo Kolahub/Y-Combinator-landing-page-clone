@@ -8,20 +8,17 @@
         list-style-type: none;
     }
     &__lists {
-
-    }
-    &__links {
         position: relative;
+    }
+
+    &__links {
         text-decoration: none;
         color: black;
-
-        &:hover {
-            color: #447298;
-        }
     }
-
-    &__links:hover ~ &__tooltip {
-        visibility: visible;
+    &__lists:hover  &__links {
+        color: rgb(69,138,210);
+    }
+    &__lists:hover &__tooltip {
         display: block;
     }
 }

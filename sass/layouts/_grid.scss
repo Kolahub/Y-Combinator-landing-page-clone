@@ -1,7 +1,8 @@
 .topThree {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 2rem;
+    row-gap: 2rem;
     max-width: 110rem;
     margin: 0 auto;
 
@@ -15,11 +16,15 @@
             color: rgb(69,138,210);
         }
     }
+
+    @include respond(tab-port) {
+        max-width: 90rem;
+      }
 }
 
 .companies__more {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns:repeat(auto-fit, minmax(12rem, 1fr));
     column-gap: 1.5rem;
     row-gap: 3rem;
     max-width: 110rem;
@@ -47,6 +52,10 @@
         font-size: 3rem;
         font-weight: bolder;
     }
+
+    @include respond(tab-port) {
+        max-width: 90rem;
+      }
 }
 
 .purpose {
@@ -73,11 +82,20 @@
                 top: 14%;
             }
         }
+
+        @include respond(tab-port) { 
+            font-size: 1.8rem;
+            column-gap: 2.5rem;
+        }
     }
     &__one > div:nth-child(-n + 2) {
         border-left: .4rem solid $color-primary;
         font-weight: bolder;
         margin-bottom: 2rem;
+
+        @include respond(tab-port) { 
+            font-size: 2.2rem;
+        }
     }
 
     &__two {
@@ -96,11 +114,25 @@
                 left: 0;
                 top: 14%;
             }
+
+        }
+        @include respond(tab-port) { 
+            font-size: 1.8rem;
         }
     }
     &__two > div:nth-child(-n + 2) {
         border-left: .4rem solid $color-primary;
         font-weight: bolder;
         margin-bottom: 2rem;
+
+        @include respond(tab-port) { 
+            font-size: 2.2rem;
+            margin-top: 2.5rem;
+        }
     }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        grid-template-columns: 1fr;
+      }
 }
