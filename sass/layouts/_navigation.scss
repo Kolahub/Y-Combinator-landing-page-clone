@@ -1,0 +1,27 @@
+.navigation {
+    flex: 1;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        list-style-type: none;
+    }
+    &__lists {
+
+    }
+    &__links {
+        position: relative;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: #447298;
+        }
+    }
+
+    &__links:hover ~ &__tooltip {
+        visibility: visible;
+        display: block;
+    }
+}

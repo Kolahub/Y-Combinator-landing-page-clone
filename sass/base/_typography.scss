@@ -1,0 +1,27 @@
+body {
+  font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+
+.heading__sec {
+  max-width: 110rem;
+  margin: 5rem auto 3rem auto;
+
+  &--text {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+.heading__ter {
+  max-width: 50rem;
+  margin: 0 auto 4rem auto;
+
+  &--text {
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.4;
+  }
+} 

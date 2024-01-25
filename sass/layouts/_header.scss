@@ -1,0 +1,40 @@
+.header {
+    background-color: $color-grey-light;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    z-index: 5000;
+
+    &__content {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+        max-width: 110rem;
+        margin: 0 auto;
+        margin-top: 1.4rem;
+    }
+    &__logo {
+        
+        &--img {
+            width: 6rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        &--apply {
+            padding: .5rem 1rem;
+            font-size: 1.8rem;
+
+        }
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    background-color: $color-white;
+    padding: .4rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    z-index: 1;
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+    transform: display 0.3s;
+    &--box {
+        list-style-type: none;
+
+        &__lists {
+            height: 3rem;
+            line-height: .3rem;
+            padding: 2rem;
+
+            &:hover {
+                background-color: $color-grey-light;
+            }
+        }
+        &__links {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
