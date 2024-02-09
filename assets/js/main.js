@@ -1,10 +1,8 @@
 /*=============== SWIPER JS ===============*/
 let swiperCards = new Swiper(".card__content", {
-  // loop: false,
+  loop: true,
   spaceBetween: 32,
   grabCursor: true,
-  slidesPerGroup: 3,
-  loop: false,
 
   pagination: {
     el: ".swiper-pagination",
@@ -23,6 +21,7 @@ let swiperCards = new Swiper(".card__content", {
     },
     968: {
       slidesPerView: 3,
+      slidesPerColumn: 1,
     },
   },
 });
