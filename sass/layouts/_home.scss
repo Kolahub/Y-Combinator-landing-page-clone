@@ -102,8 +102,12 @@
             background-color: $color-primary;
         }
 
+        @include respond (phone) {  
+            width: 45%;
+        }
         @include respond (phone-port) { 
             font-size: 1.6rem;
+            width: 40%;
         }
     }
 
