@@ -21,10 +21,17 @@
             max-width: 90rem;
             margin: 0 auto;
             transform: translateY(-10%);
-            width: 50%;
+            width: 60%;
             padding-left: 0;
           }
-
+          @include respond (phone) { 
+            max-width: 40rem;
+            width: 100%;
+          }
+          @include respond (phone-port) { 
+            max-width: 36rem;
+            transform: translateY(-2%);
+          }
         h1 {
             font-size: 5.5rem;
             color: $color-primary;
@@ -40,6 +47,20 @@
                     font-size: 7rem;
                 }
               }
+
+              @include respond (phone) {
+                font-size: 5rem;
+                &:first-child {
+                    font-size: 6rem;
+                }
+            }
+
+            // @include respond (phone-port) { 
+            //     font-size: 4rem;
+            //     &:first-child {
+            //         font-size: 5rem;
+            //     }   
+            // }
         }
         P {
             font-size: 2.6rem;
@@ -47,6 +68,14 @@
 
             span {
                 display: block;
+            }
+
+            @include respond (phone) { 
+                font-size: 3rem;
+            }
+
+            @include respond (phone-port) { 
+                font-size: 2.5rem;
             }
         }
     }
@@ -78,6 +107,10 @@
         
         &:hover{
             background-color: $color-primary;
+        }
+
+        @include respond (phone-port) { 
+            font-size: 1.6rem;
         }
     }
 

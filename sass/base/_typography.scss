@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
@@ -13,15 +13,37 @@ body {
     text-align: center;
     font-size: 3rem;
   }
+
+  @include respond (phone-port) {  
+    margin: 5rem auto 0 auto;
+  }
 }
 
 .heading__ter {
-  max-width: 55rem;
+  max-width: 64rem;
   margin: 0 auto 4rem auto;
 
   &--text {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.4;
   }
+
+  @include respond (phone-port) { 
+    max-width: 44rem;
+    &--text { 
+      font-size: 3.2rem;
+    }
+  }
 } 
+
+.priority {
+  &__heading {
+    &--text {
+
+      @include respond (tab-port) {  
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

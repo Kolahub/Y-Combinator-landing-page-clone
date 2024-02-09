@@ -1,138 +1,541 @@
 .topThree {
-    display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
-    column-gap: 2rem;
-    row-gap: 2rem;
-    max-width: 110rem;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+  max-width: 110rem;
+  margin: 0 auto;
 
-    &--box {
-        background-color: $color-white;
-        min-height: 15rem;
-        padding: 2rem;
-        border-radius: 1rem;
+  &--box {
+    background-color: $color-white;
+    min-height: 15rem;
+    padding: 2rem;
+    border-radius: 1rem;
 
-        h3 {
-            color: rgb(69,138,210);
-        }
+    h3 {
+      color: rgb(69, 138, 210);
     }
+  }
 
-    @include respond(tab-port) {
-        max-width: 90rem;
-      }
+  @include respond(tab-port) {
+    max-width: 90rem;
+  }
+
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+
+  @include respond(phone-port) {
+    max-width: 44rem;
+  }
 }
 
 .companies__more {
-    display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(12rem, 1fr));
-    column-gap: 1.5rem;
-    row-gap: 3rem;
-    max-width: 110rem;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+  max-width: 110rem;
+  margin: 0 auto;
 
-    &--img {
-        height: 6rem;
-        padding: 1rem 3.5rem;
-        border-radius: 0.5rem;
-        background-color: white;
-        position: relative;
+  &--img {
+    height: 6rem;
+    padding: 1rem 3.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
 
-        img {
-            width: 8rem;
-            background-color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    img {
+      width: 8rem;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+  }
 
-    &--add {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: bolder;
-    }
+  &--add {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
 
-    @include respond(tab-port) {
-        max-width: 90rem;
-      }
+  @include respond(tab-port) {
+    max-width: 90rem;
+  }
+
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+
+  @include respond(phone-port) {
+    max-width: 44rem;
+  }
 }
 
 .purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  max-width: 110rem;
+  margin: 0 auto;
+
+  &__one {
     display: grid;
+    column-gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
-    max-width: 110rem;
-    margin: 0 auto;
 
-    &__one {
-        display: grid;
-        column-gap: 1rem;
-        grid-template-columns: 1fr 1fr;
-        &--child {
-            position: relative;
-            padding: .5rem 2rem;
-            span {
-                position: absolute;
-                height: .8rem;
-                width: .8rem;
-                background-color: $color-black;
-                border-radius: .4rem;
-                left: 0;
-                top: 14%;
-            }
+    &--child {
+      position: relative;
+      padding: 0.5rem 2rem;
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
+      h4 {
+        width: 16rem;
+        line-height: 1.5;
+      }
+      span {
+        position: absolute;
+        height: 0.8rem;
+        width: 0.8rem;
+        background-color: $color-black;
+        border-radius: 0.4rem;
+        left: 0;
+        top: 14%;
+      }
+      @include respond(tab-port) {
+        h4 {
+          font-size: 2.3rem;
+          width: 22rem;
         }
-
-        @include respond(tab-port) { 
-            font-size: 1.8rem;
-            column-gap: 2.5rem;
+        p {
+          font-size: 2rem;
         }
-    }
-    &__one > div:nth-child(-n + 2) {
-        border-left: .4rem solid $color-primary;
-        font-weight: bolder;
-        margin-bottom: 2rem;
-
-        @include respond(tab-port) { 
-            font-size: 2.2rem;
+      }
+      @include respond(phone-port) {
+        h4 {
+          width: 100%;
         }
-    }
-
-    &__two {
-        display: grid;
-        column-gap: 1rem;
-        grid-template-columns: 1fr 1fr;
-        &--child {
-            position: relative;
-            padding: .5rem 2rem;
-            span {
-                position: absolute;
-                height: .8rem;
-                width: .8rem;
-                background-color: black;
-                border-radius: .4rem;
-                left: 0;
-                top: 14%;
-            }
-
-        }
-        @include respond(tab-port) { 
-            font-size: 1.8rem;
-        }
-    }
-    &__two > div:nth-child(-n + 2) {
-        border-left: .4rem solid $color-primary;
-        font-weight: bolder;
-        margin-bottom: 2rem;
-
-        @include respond(tab-port) { 
-            font-size: 2.2rem;
-            margin-top: 2.5rem;
-        }
+      }
     }
 
     @include respond(tab-port) {
-        max-width: 50rem;
-        grid-template-columns: 1fr;
+      font-size: 1.8rem;
+      column-gap: 2.5rem;
+    }
+
+    @include respond(phone-port) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+  }
+  &__one &__one--child:nth-child(-n + 1) {
+    border-left: 0.4rem solid $color-primary;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    height: 12rem;
+
+    @include respond(tab-port) {
+      font-size: 2.3rem;
+      height: 16rem;
+    }
+    @include respond(phone-port) {
+      height: auto;
+    }
+  }
+
+  &__two {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    &--child {
+      position: relative;
+      padding: 0.5rem 2rem;
+      &:not(:first-child) {
+        margin-top: 3rem;
       }
+      h4 {
+        width: 16rem;
+        line-height: 1.5;
+      }
+      span {
+        position: absolute;
+        height: 0.8rem;
+        width: 0.8rem;
+        background-color: black;
+        border-radius: 0.4rem;
+        left: 0;
+        top: 14%;
+      }
+
+      @include respond(tab-port) {
+        h4 {
+          font-size: 2.3rem;
+          width: 22rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+
+      @include respond(phone-port) {
+        h4 {
+          width: 100%;
+        }
+      }
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__two &__two--child:nth-child(-n + 1) {
+    border-left: 0.4rem solid $color-primary;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    height: 12rem;
+
+    @include respond(tab-port) {
+      font-size: 2.3rem;
+      margin-top: 3rem;
+      height: 15rem;
+    }
+
+    @include respond(phone-port) {
+      height: auto;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 58rem;
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(phone-port) {
+    max-width: 44rem;
+  }
+}
+
+.runby__layouts {
+  display: grid;
+  max-width: 110rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  column-gap: 3.5rem;
+  row-gap: 10rem;
+
+  &--self {
+    padding: 3.5rem;
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &--picbox {
+    width: 100%;
+  }
+  &--pic {
+    width: 100%;
+    aspect-ratio: 16/7.5;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  &--typo {
+    margin-top: 2.5rem;
+
+    h3 {
+      border-left: 0.5rem solid $color-primary;
+      padding-left: 0.7rem;
+    }
+
+    @include respond(tab-port) {
+      h3 {
+        font-size: 2.1rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.125em) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+  }
+}
+
+.priority__lists {
+  display: grid;
+  max-width: 95rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+
+  p {
+    line-height: 2.5;
+  }
+
+  span {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: $color-primary;
+    transform: rotate(45deg);
+    margin-right: 1rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: 60rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    p {
+      font-size: 2rem;
+    }
+
+    span {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+
+  @include respond(phone-port) {
+    max-width: 44rem;
+  }
+}
+
+.priority__pics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5rem;
+  max-width: 110rem;
+  margin: 0 auto;
+  margin-top: 5rem !important;
+  &--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  @media only screen and (max-width: 63.75rem) {
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.community {
+  &__coreMs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 110rem;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+    }
+
+    &--box {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      column-gap: 2rem;
+
+      p {
+        font-size: 1.8rem;
+      }
+      &__pic {
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+.lastest {
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    max-width: 110rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr 9rem;
+      column-gap: 1rem;
+      border-radius: 0.8rem;
+      padding: 1rem;
+
+      &__pic {
+        border-radius: 0.8rem;
+      }
+      &__text {
+        align-items: center;
+      }
+      p {
+        line-height: 1.3;
+        font-size: 1.3rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+      row-gap: 2rem;
+
+      h4 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.interested {
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    max-width: 110rem;
+    margin: 0 auto;
+
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr 9rem;
+      column-gap: 1rem;
+      border-radius: 0.8rem;
+      background-color: $color-white;
+      padding: 1.5rem;
+
+      &__pic {
+        border-radius: 0.8rem;
+      }
+      &__text {
+        align-items: center;
+      }
+      p {
+        line-height: 1.3;
+        font-size: 1.3rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+      row-gap: 2rem;
+      h4 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.footer {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 8rem;
+    max-width: 110rem;
+    margin: 0 auto;
+    &--pic {
+      width: 6rem;
+    }
+    &--nav {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3rem;
+      &__items {
+        list-style-type: none;
+      }
+      &__heading {
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        @include respond(tab-port) { 
+          font-size: 2rem;
+        }
+      }
+      &__links {
+        font-size: 1.4rem;
+        color: black;
+        @include respond(tab-port) { 
+          font-size: 1.7rem;
+        }
+      }
+    }
+    &--context {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      &__btn {
+        padding: 0.5rem 1rem;
+        font-size: 1.8rem;
+        background-color: $color-primary;
+
+        &:hover {
+          background-color: $color-primary-light;
+        }
+      }
+
+      @include respond(tab-port) { 
+        font-size: 2rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      position: relative;
+      gap: 3rem;
+      padding: 2rem;
+      &--pic {
+        width: 8rem;
+      }
+      &--nav {
+        column-gap: 6rem;
+      }
+      &--context {
+        justify-content: start;
+        position: absolute;
+        bottom: -5rem;
+        right: 2rem;
+      }
+    }
+    @include respond(phone) {
+      &--nav {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+      }
+      &--context {
+        justify-content: start;
+        position: absolute;
+        bottom: -5rem;
+        left: 2rem;
+      }
+    }
+  }
 }

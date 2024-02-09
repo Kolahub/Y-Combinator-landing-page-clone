@@ -13,14 +13,14 @@
         align-items: center;
         max-width: 110rem;
         margin: 0 auto;
-        margin-top: 1.4rem;
+        margin-top: 1.8rem;
 
         @include respond(tab-land) {
             padding: 0 3.5rem;
           }
     }
     &__logo {
-        
+        height: 6rem;
         &--img {
             width: 6rem;
         }
@@ -44,6 +44,9 @@
 
             &:hover {
                 background-color: $color-primary-light;
+            }
+            @include respond (phone) {
+                display: none;
             }
         }
     }

@@ -1,0 +1,19 @@
+.iframe {
+    &__box {
+        max-width: 70rem;
+        margin:0 auto; 
+        iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+        @include respond (tab-port) { 
+            max-width: 80rem;
+        }
+        @media only screen and (max-width:45em) {
+            width: calc(100% - 4rem);
+            margin: 0 2rem;
+            max-width: 70rem;
+            margin:0 auto; 
+}
+    }
+}

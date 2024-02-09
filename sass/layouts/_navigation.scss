@@ -21,4 +21,8 @@
     &__lists:hover &__tooltip {
         display: block;
     }
+
+    @include respond (phone) {
+        display: none;
+    }
 }
