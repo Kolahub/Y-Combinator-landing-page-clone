@@ -22,10 +22,11 @@ let swiperCards = new Swiper(".card__content", {
     },
     600: {
       slidesPerView: 2,
-      slidesPerGroup: 3,
+      slidesPerGroup: 2,
     },
     968: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
     },
   },
 });

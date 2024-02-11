@@ -78,14 +78,14 @@ body {
 .btn {
   border-radius: .8rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none; }
 
 .tooltip {
   position: absolute;
   top: 100%;
-  background-color: #fff;
-  padding: .4rem;
+  background-color: #ffffff;
+  padding: 1rem .5rem;
   border-radius: .5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   white-space: nowrap;
@@ -102,6 +102,9 @@ body {
   .tooltip__links {
     text-decoration: none;
     color: black; }
+  @media only screen and (max-width: 56.25em) {
+    .tooltip__links {
+      font-size: 1.9rem; } }
   @media only screen and (max-width: 37.5em) {
     .tooltip {
       display: block;
@@ -113,9 +116,7 @@ body {
       padding: 0;
       transition: all 1.4s ease; }
       .tooltip__lists {
-        height: 0; }
-      .tooltip__links {
-        font-size: 1.8rem; } }
+        height: 0; } }
 
 @media only screen and (max-width: 37.5em) {
   .navigation__lists.active .tooltip {
@@ -214,7 +215,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .navigation__button {
         display: block;
-        background-color: #fff;
+        background-color: #ffffff;
         height: 8rem;
         width: 8rem;
         top: 0.7rem;
@@ -237,8 +238,9 @@ body {
         z-index: 1500;
         width: 0;
         opacity: 0;
-        background-color: #fff;
-        transition: all 0.4s ease; } }
+        background-color: #ffffff;
+        box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+        transition: all .1s ease-out; } }
   .navigation__items {
     display: flex;
     justify-content: start;
@@ -273,7 +275,7 @@ body {
     cursor: pointer; }
     @media only screen and (max-width: 56.25em) {
       .navigation__links {
-        font-size: 2.2rem; } }
+        font-size: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__links {
         font-weight: 300;
@@ -299,8 +301,8 @@ body {
     .navigation__checkbox:checked + .navigation__button .navigation__icon {
       margin-top: 3.5rem; }
     .navigation__checkbox:checked ~ .navigation__nav {
-      width: calc(100% - 2.5rem);
-      margin-right: 2.5rem;
+      width: calc(100% - 2.8rem);
+      margin-right: 2.8rem;
       opacity: 1; }
     .navigation__icon {
       position: relative;
@@ -343,7 +345,7 @@ body {
   max-width: 110rem;
   margin: 0 auto; }
   .topThree--box {
-    background-color: #fff;
+    background-color: #ffffff;
     min-height: 15rem;
     padding: 2rem;
     border-radius: 1rem; }
@@ -677,7 +679,7 @@ body {
     grid-template-columns: 1fr 9rem;
     column-gap: 1rem;
     border-radius: 0.8rem;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1.5rem; }
     .interested__info--container__pic {
       border-radius: 0.8rem;

@@ -23,10 +23,7 @@
   &__nav {
     @include flexCenterStart(space-between, center);
     @include respond(phone) {
-      // display: block;
       flex-direction: column;
-      // min-height: 100%;
-      // row-gap:10rem ;
       position: fixed;
       top: 1rem;
       left: 1.5rem;
@@ -34,7 +31,8 @@
       width: 0;
       opacity: 0;
       background-color: $color-white;
-      transition: all 0.4s ease;
+      box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .3);
+      transition: all .1s ease-out;
     }
   }
 
@@ -74,7 +72,7 @@
   &__links {
     cursor: pointer;
     @include respond(tab-port) { 
-          font-size: 2.2rem;
+          font-size: 2rem;
     }
     @include respond(phone) {
         font-weight: 300;
@@ -112,8 +110,8 @@
         margin-top: 3.5rem;
     }
     &__checkbox:checked ~ &__nav {
-      width: calc(100% - 2.5rem);
-      margin-right: 2.5rem;
+      width: calc(100% - 2.8rem);
+      margin-right: 2.8rem;
       opacity: 1;
     }
 

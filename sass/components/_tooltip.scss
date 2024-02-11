@@ -2,7 +2,7 @@
     position: absolute;
     top: 100%;
     background-color: $color-white;
-    padding: .4rem;
+    padding: 1rem .5rem;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
     white-space: nowrap;
@@ -24,7 +24,11 @@
             text-decoration: none;
             color: black;
         }
-
+        @include respond(tab-port) { 
+            &__links { 
+                font-size: 1.9rem;
+            }
+        }
         @include respond(phone) {
             display: block;
             background-color: transparent;
@@ -37,10 +41,6 @@
 
             &__lists { 
                 height: 0;
-            }
-
-            &__links { 
-                font-size: 1.8rem;
             }
         }
 }
