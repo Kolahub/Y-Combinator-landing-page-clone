@@ -28,9 +28,11 @@ body {
     font-size: 3rem;
     line-height: 1.4;
   }
-
+  @include respond (tab-port) { 
+    @include fullWidthMargin;
+    margin: 0 auto 4rem auto;
+  }
   @include respond (phone-port) { 
-    max-width: 44rem;
     &--text { 
       font-size: 3.2rem;
     }

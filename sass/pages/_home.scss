@@ -1,9 +1,16 @@
 .home {
     padding-top: 8rem;
     height: 90vh;
-
-    @include respond  (phone) {
+    @include respond  (tab-port) {
         height: 70vh;
+    }
+
+    @media only screen and (max-width: 20em) {   
+        height: 90vh;
+    }
+
+    @media only screen and (max-width: 18.75em) {  
+        height: 60vh;
     }
 }
 

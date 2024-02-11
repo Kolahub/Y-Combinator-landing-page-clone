@@ -6,12 +6,15 @@
     right: 0;
     height: 10rem;
     z-index: 5000;
+    &__container { 
+        @include flexCenterStart(space-between, center);
 
+    }
     &__content {
         @include flexCenterStart(start, center);
-        gap: 2.5rem;
         max-width: 110rem;
         margin: 0 auto;
+        gap: 2.5rem;
         margin-top: 1.8rem;
 
         @include respond(tab-land) {
@@ -31,11 +34,14 @@
     &__btn {
         @include flexCenterStart(start, center);
         gap: 1.2rem;
-
         &--text {
             @include respond(tab-land) {
                 display: none;
               }
+        }
+        &--subText { 
+            display: none;
+            color: $color-primary;
         }
 
         &--apply {
@@ -46,9 +52,23 @@
             &:hover {
                 background-color: $color-primary-light;
             }
+            @include respond (tab-port) { 
+                padding: .5rem 1.4rem;
+                font-size: 2.2rem;
+            }
             @include respond (phone) {
                 display: none;
             }
+        }
+        @include respond (phone) { 
+            display: block;
+            text-align: center;
+            font-size: 2.2rem;
+            z-index: 5000;
+            flex-grow: 1;
+            width: 100% !important;
+            padding: 1rem 0;
+            background-color: $color-grey-light;
         }
     }
 }
