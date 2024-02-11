@@ -1,7 +1,10 @@
 .home {
     padding-top: 8rem;
     height: 90vh;
-    // background-color: aqua;
+
+    @include respond  (phone) {
+        height: 70vh;
+    }
 }
 
 .companies {

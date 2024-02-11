@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;1,6..12,500&display=swap" rel="stylesheet">
-          <!--=============== REMIXICONS ===============-->
+<!--=============== REMIXICONS ===============-->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
 
           <!--=============== SWIPER CSS ===============-->
@@ -30,273 +30,291 @@
           />
         </div>
         <nav class="navigation">
-          <ul class="navigation__items">
-            <li class="navigation__lists">
+          <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+          <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+          <div class="navigation__nav">
+            <ul class="navigation__items">
+              <li class="navigation__lists">
+                  <div class="navigation__heading">
+                    <p class="navigation__links about--tooltip">
+                      About
+                    </p>
+                    <span class="navigation__arrow"><img src="images/angle-down-solid.svg" alt="" class="navigation__arrow--pic"></span>
+                  </div>
+                <ul class="navigation__tooltip tooltip">
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >What Happens at YC?</a
+                    >
+                  </li>
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >Apply</a
+                    >
+                  </li>
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >YC Interveiw Guide</a
+                    >
+                  </li>
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >People</a
+                    >
+                  </li>
+                  <li
+                    class="navigation__tooltip__lists tooltip__lists"
+                  >
+                    <a
+                      href=""
+                      class="navigation__tooltip__links tooltip__links"
+                      >YC blog</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-              <a href="/" class="navigation__links about--tooltip">
-                About
-              </a>
+              <li class="navigation__lists">
+                <div class="navigation__heading">
+                  <p class="navigation__links"
+                  >Companies
+                </p>
+                <span class="navigation__arrow"><img src="images/angle-down-solid.svg" alt="" class="navigation__arrow--pic"></span>
+                </div>
+                    <ul class="navigation__tooltip tooltip">
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >StartUp Directory</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Top Companies</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                        ></a
+                        >&#x25CB; Revenue
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >&#x25CB;Valuation</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Founder Directory</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
+                      >
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Launch YC</a
+                        >
+                      </li>
+                    </ul>
+              </li>
 
-              <ul class="navigation__tooltip tooltip">
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >What Happens at YC?</a
-                  >
-                </li>
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >Apply</a
-                  >
-                </li>
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >YC Interveiw Guide</a
-                  >
-                </li>
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >FAQ</a
-                  >
-                </li>
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >People</a
-                  >
-                </li>
-                <li
-                  class="navigation__tooltip__lists tooltip__lists"
-                >
-                  <a
-                    href=""
-                    class="navigation__tooltip__links tooltip__links"
-                    >YC blog</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links"
-                >Companies
-                  <ul class="navigation__tooltip tooltip">
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >StartUp Directory</a
+              <li class="navigation__lists">
+                <div class="navigation__heading">
+                  <p class="navigation__links"
+                  >Startup Jobs
+                </p>
+                  <span class="navigation__arrow"><img src="images/angle-down-solid.svg" alt="" class="navigation__arrow--pic"></span>
+                </div>
+                    <ul class="navigation__tooltip tooltip">
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Top Companies</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >All Jobs</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                      ></a
-                      >&#x25CB; Revenue
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >&#x25CB;Valuation</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >&#x25CB; Engineering</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Founder Directory</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                        ></a
+                        >&#x25CB; Operations
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Launch YC</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >&#x25CB; marketing</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                  </ul>
-              </a>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links"
-                >Startup Jobs
-                  <ul class="navigation__tooltip tooltip">
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >All Jobs</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                        >
+                          &#x25CB; sales</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >&#x25CB; Engineering</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Career Coaching</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                      ></a
-                      >&#x25CB; Operations
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >&#x25CB; marketing</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >StartUp Job Guide</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >YC StartUp Jobs Blog</a
+                        >
+                      </li>
+                    </ul>
+              </li>
+              <li class="navigation__lists">
+                <p class="navigation__links">Find a Co-Founder</p>
+              </li>
+              <li class="navigation__lists">
+                <p class="navigation__links">Library</p>
+              </li>
+              <li class="navigation__lists">
+                <p class="navigation__links">SAFE</p>
+              </li>
+              <li class="navigation__lists">
+                <div class="navigation__heading">
+                  <p class="navigation__links"
+                  >Resources
+                </p>
+                <span class="navigation__arrow"><img src="images/angle-down-solid.svg" alt="" class="navigation__arrow--pic"></span>
+                </div>
+                    <ul class="navigation__tooltip tooltip">
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                        &#x25CB; sales</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Startup School</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Career Coaching</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Newletters</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >StartUp Job Guide</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                        ></a
+                        >For Investors
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >YC StartUp Jobs Blog</a
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Hacker News</a
+                        >
+                      </li>
+                      <li
+                        class="navigation__tooltip__lists tooltip__lists"
                       >
-                    </li>
-                  </ul>
-              </a>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links">Find a Co-Founder</a>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links">Library</a>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links">SAFE</a>
-            </li>
-            <li class="navigation__lists">
-              <a href="/" class="navigation__links"
-                >Resources
-                  <ul class="navigation__tooltip tooltip">
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Startup School</a
-                      >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Newletters</a
-                      >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                      ></a
-                      >For Investors
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Hacker News</a
-                      >
-                    </li>
-                    <li
-                      class="navigation__tooltip__lists tooltip__lists"
-                    >
-                      <a
-                        href=""
-                        class="navigation__tooltip__links tooltip__links"
-                        >Bookface</a
-                      >
-                    </li>
-                  </ul>
-              </a>
-            </li>
-          </ul>
+                        <a
+                          href=""
+                          class="navigation__tooltip__links tooltip__links"
+                          >Bookface</a
+                        >
+                      </li>
+                    </ul>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <div class="header__btn">
@@ -307,8 +325,8 @@
         </div>
       </div>
     </header>
+
     <main>
-      
       <section class="home">
         <div class="home__content">
           <div class="home__typography">
@@ -903,6 +921,7 @@
         </div>
       </section>
     </main>
+    
     <footer class="footer">
       <div class="footer__content">
         <div class="footer__content--img">
@@ -949,9 +968,42 @@
             <a href="/" class="btn footer__content--context__btn">Apply</a>
         </div>
       </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom--text">
+          <p>	&#169; 2023 Y Combinator</p>
+        </div>
+        <div class="footer__bottom--links">
+          <div class="footer__bottom--links__box">
+            <a href="https://twitter.com/AdekolaFaheez" class="footer__bottom--links__btn">
+            <img src="images/twitter.svg" alt="" class="footer__bottom--links__svg">
+          </a>
+          </div>
+          <div class="footer__bottom--links__box">
+            <a href="/" class="footer__bottom--links__btn">
+              <img src="images/facebook.svg" alt="" class="footer__bottom--links__svg">
+            </a>
+          </div>
+          <div class="footer__bottom--links__box">
+            <a href="https://www.instagram.com/faheez.z/?next=%2F" class="footer__bottom--links__btn">
+              <img src="images/instagram.svg" alt="" class="footer__bottom--links__svg">
+            </a>
+          </div>
+          <div class="footer__bottom--links__box">
+            <a href="https://www.linkedin.com/in/faheez-ayofe-13049725b/" class="footer__bottom--links__btn">
+              <img src="images/linkedin.svg" alt="" class="footer__bottom--links__svg">
+            </a>
+          </div>
+          <div class="footer__bottom--links__box">
+            <a href="/" class="footer__bottom--links__btn">
+              <img src="images/youtube.svg" alt="" class="footer__bottom--links__svg">
+            </a>
+          </div>
+          
+        </div>
+      </div>
     </footer>
 
-
+    <script src="script.js"></script>
           <!--=============== SWIPER JS ===============-->
           <script src="assets/js/swiper-bundle.min.js"></script>
 

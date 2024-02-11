@@ -1,3 +1,18 @@
+@mixin flexCenterStart($js, $ai) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+}
+@mixin fullWidthMargin {
+  width: calc(100% - 4rem);
+  margin: 0 2rem;
+}
+@mixin customAbsolutePosition ($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-$left, -$left);
+}
 @mixin respond($breakpoint) {
     @if $breakpoint == phone-port {
       @media only screen and (max-width:28.125em) {@content};

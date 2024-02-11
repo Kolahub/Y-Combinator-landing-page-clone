@@ -1,28 +1,165 @@
 .navigation {
-    flex: 1;
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-        list-style-type: none;
+  flex: 1;
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    display: none;
+    @include respond(phone) {
+      display: block;
+      background-color: $color-white;
+      height: 8rem;
+      width: 8rem;
+      top: 0.7rem;
+      right: 0.2rem;
+      transform: scale(0.6);
+      position: fixed;
+      text-align: center;
+      z-index: 2000;
+      cursor: pointer;
     }
-    &__lists {
-        position: relative;
-    }
+  }
 
-    &__links {
-        text-decoration: none;
-        color: black;
+  &__nav {
+    @include respond(phone) {
+      height: 100%;
+      position: fixed;
+      top: 1rem;
+      right: 0;
+      z-index: 1500;
+      width: 0;
+      opacity: 0;
+      background-color: $color-white;
+      transition: all 0.4s cubic-bezier(0.5, 1, 0.89, 1);
     }
-    &__lists:hover  &__links {
-        color: rgb(69,138,210);
+  }
+
+  &__items {
+    @include flexCenterStart(start, center);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+
+    @include respond(phone) {
+      min-height: 100vh;
+      width: 100%;
+      margin: 0 auto;
+      flex-direction: column;
+      gap: 0;
+      padding: 0 1.5rem;
+      position: absolute;
+      top: 12%;
+    }
+  }
+  &__lists {
+    position: relative;
+
+    @include respond(phone) {
+      display: block;
+      width: 100%;
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__heading {
+    @include respond(phone) {
+    @include flexCenterStart(start, center);
+      gap:  1.5rem;
+    }
+  }
+  &__links {
+    cursor: pointer;
+
+    @include respond(phone) {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 2.2;
+        color: $color-black;
+        text-decoration: none;
+        transition: all 0.4s;
+    }
+  }
+  &__arrow {
+    display: none;
+
+    &--pic {
+        width: 1.5rem;
+      }
+  }
+  @media only screen and (min-width: 37.5em) {
+    &__lists:hover &__links {
+      color: rgb(69, 138, 210);
     }
     &__lists:hover &__tooltip {
-        display: block;
+      display: block;
+    }
+  }
+
+  @include respond(phone) {
+    &__checkbox:checked + &__button { 
+        border: .5rem solid $color-primary;
+    }
+    &__checkbox:checked + &__button &__icon{ 
+        margin-top: 3.5rem;
+    }
+    &__checkbox:checked ~ &__nav {
+      width: 100%;
+      opacity: 1;
     }
 
-    @include respond (phone) {
-        display: none;
+    &__icon {
+      position: relative;
+      margin-top: 4rem;
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-grey-dark-3;
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.1s;
+      }
+      &::before {
+        top: -0.8rem;
+      }
+      &::after {
+        top: 0.8rem;
+      }
     }
+
+    &__button:hover &__icon::before {
+      top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+      top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+      background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+
+    &__arrow {
+      display: block;
+    }
+  }
 }

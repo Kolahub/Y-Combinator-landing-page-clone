@@ -1,14 +1,12 @@
 .home {
-    // background-color: aqua;
     &__content {
-        display: flex;
-        align-items: center;
-        justify-content: end;
+        @include flexCenterStart(end, center);
         margin: 0 auto;
         position: relative;
 
         @include respond(tab-port) {
             height: 100%;
+            display: block;
           }
     }
     &__typography {
@@ -20,17 +18,15 @@
           @include respond(tab-port) {
             max-width: 90rem;
             margin: 0 auto;
-            transform: translateY(-10%);
+            @include customAbsolutePosition (50%, 50%);
             width: 60%;
             padding-left: 0;
           }
           @include respond (phone) { 
             max-width: 40rem;
-            width: 100%;
           }
-          @include respond (phone-port) { 
-            max-width: 36rem;
-            transform: translateY(-2%);
+          @include respond (phone-port) {
+            @include fullWidthMargin;
           }
         h1 {
             font-size: 5.5rem;
@@ -54,6 +50,14 @@
                     font-size: 6rem;
                 }
             }
+
+            @media only screen and (max-width: 18.75em) {  
+                font-size: 3rem;
+                &:first-child {
+                    margin-bottom: -2rem;
+                    font-size: 4rem;
+                }
+            }
         }
         P {
             font-size: 2.6rem;
@@ -69,6 +73,10 @@
 
             @include respond (phone-port) { 
                 font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: 18.75em) {  
+                font-size: 1.8rem;
             }
         }
     }
@@ -103,20 +111,21 @@
         }
 
         @include respond (phone) {  
-            width: 45%;
+            width: 20rem;
         }
         @include respond (phone-port) { 
             font-size: 1.6rem;
-            width: 40%;
+            width: 15rem;
+        }
+        @media only screen and (max-width: 18.75em) { 
+            font-size: 1rem; 
+            width: 10rem;
         }
     }
 
     &__label {
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include customAbsolutePosition (50%, 50%);
         z-index: -1;
 
         &--con {

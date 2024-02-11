@@ -5,8 +5,8 @@
     padding: .4rem;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
-    display: none;
     white-space: nowrap;
+    display: none;
     list-style-type: none;
     z-index: 1;
     transform: display 3s;
@@ -24,4 +24,30 @@
             text-decoration: none;
             color: black;
         }
+
+        @include respond(phone) {
+            display: block;
+            background-color: transparent;
+            box-shadow: none;
+            position: static;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            transition: all 1.4s ease;
+
+            &__lists { 
+                height: 0;
+            }
+
+            &__links { 
+                font-size: 1.8rem;
+            }
+        }
+}
+
+@include respond(phone) {
+.navigation__lists.active .tooltip {
+    max-height: 35rem;
+
+}
 }

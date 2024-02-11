@@ -8,15 +8,14 @@
     z-index: 5000;
 
     &__content {
-        display: flex;
+        @include flexCenterStart(start, center);
         gap: 2.5rem;
-        align-items: center;
         max-width: 110rem;
         margin: 0 auto;
         margin-top: 1.8rem;
 
         @include respond(tab-land) {
-            padding: 0 3.5rem;
+            width: calc(100% - 4rem);
           }
     }
     &__logo {
@@ -24,11 +23,13 @@
         &--img {
             width: 6rem;
         }
+        @include respond (phone) {
+            z-index: 2000;
+        }
     }
 
     &__btn {
-        display: flex;
-        align-items: center;
+        @include flexCenterStart(start, center);
         gap: 1.2rem;
 
         &--text {

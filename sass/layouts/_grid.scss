@@ -18,15 +18,12 @@
   }
 
   @include respond(tab-port) {
-    max-width: 90rem;
+    @include fullWidthMargin;
   }
 
-  @include respond(phone) {
-    max-width: 50rem;
-  }
-
-  @include respond(phone-port) {
-    max-width: 44rem;
+  @media only screen and (max-width: 18.75em) { 
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -62,15 +59,7 @@
   }
 
   @include respond(tab-port) {
-    max-width: 90rem;
-  }
-
-  @include respond(phone) {
-    max-width: 50rem;
-  }
-
-  @include respond(phone-port) {
-    max-width: 44rem;
+    @include fullWidthMargin;
   }
 }
 
@@ -114,7 +103,7 @@
           font-size: 2rem;
         }
       }
-      @include respond(phone-port) {
+      @media only screen and (max-width: 31.35em) {
         h4 {
           width: 100%;
         }
@@ -126,7 +115,7 @@
       column-gap: 2.5rem;
     }
 
-    @include respond(phone-port) {
+    @media only screen and (max-width: 31.35em) {
       grid-template-columns: 1fr;
       row-gap: 4rem;
     }
@@ -142,7 +131,7 @@
       font-size: 2.3rem;
       height: 16rem;
     }
-    @include respond(phone-port) {
+    @media only screen and (max-width: 31.35em) {
       height: auto;
     }
   }
@@ -181,7 +170,7 @@
         }
       }
 
-      @include respond(phone-port) {
+      @media only screen and (max-width: 31.35em) {
         h4 {
           width: 100%;
         }
@@ -191,7 +180,7 @@
       font-size: 1.8rem;
     }
 
-    @include respond(phone-port) {
+    @media only screen and (max-width: 31.35em) {
       grid-template-columns: 1fr;
     }
   }
@@ -208,7 +197,7 @@
       height: 15rem;
     }
 
-    @include respond(phone-port) {
+    @media only screen and (max-width: 31.35em) {
       height: auto;
     }
   }
@@ -218,8 +207,8 @@
     grid-template-columns: 1fr;
   }
 
-  @include respond(phone-port) {
-    max-width: 44rem;
+  @media only screen and (max-width: 31.35em) {
+    @include fullWidthMargin;
   }
 }
 
@@ -268,7 +257,7 @@
   @media only screen and (max-width: 48.125em) {
     display: flex;
     flex-direction: column;
-    margin: 0 1.5rem;
+    @include fullWidthMargin;
   }
 }
 
@@ -306,11 +295,7 @@
   }
 
   @include respond(phone) {
-    max-width: 50rem;
-  }
-
-  @include respond(phone-port) {
-    max-width: 44rem;
+    @include fullWidthMargin;
   }
 }
 
@@ -383,6 +368,8 @@
 
       &__pic {
         border-radius: 0.8rem;
+        width: 100%;
+        object-fit: cover;
       }
       &__text {
         align-items: center;
@@ -395,8 +382,7 @@
 
     @include respond(tab-port) {
       grid-template-columns: 1fr;
-      width: calc(100% - 4rem);
-      margin: 0 2rem;
+      @include fullWidthMargin;
       row-gap: 2rem;
 
       h4 {
@@ -425,9 +411,10 @@
       border-radius: 0.8rem;
       background-color: $color-white;
       padding: 1.5rem;
-
       &__pic {
         border-radius: 0.8rem;
+        width: 100%;
+        object-fit: cover;
       }
       &__text {
         align-items: center;
@@ -440,101 +427,13 @@
 
     @include respond(tab-port) {
       grid-template-columns: 1fr;
-      width: calc(100% - 4rem);
-      margin: 0 2rem;
+      @include fullWidthMargin;
       row-gap: 2rem;
       h4 {
         font-size: 2rem;
       }
       p {
         font-size: 1.8rem;
-      }
-    }
-  }
-}
-
-.footer {
-  &__content {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 8rem;
-    max-width: 110rem;
-    margin: 0 auto;
-    &--pic {
-      width: 6rem;
-    }
-    &--nav {
-      flex: 1;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 3rem;
-      &__items {
-        list-style-type: none;
-      }
-      &__heading {
-        font-size: 1.6rem;
-        font-weight: bold;
-
-        @include respond(tab-port) { 
-          font-size: 2rem;
-        }
-      }
-      &__links {
-        font-size: 1.4rem;
-        color: black;
-        @include respond(tab-port) { 
-          font-size: 1.7rem;
-        }
-      }
-    }
-    &--context {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      &__btn {
-        padding: 0.5rem 1rem;
-        font-size: 1.8rem;
-        background-color: $color-primary;
-
-        &:hover {
-          background-color: $color-primary-light;
-        }
-      }
-
-      @include respond(tab-port) { 
-        font-size: 2rem;
-      }
-    }
-
-    @include respond(tab-port) {
-      flex-direction: column;
-      position: relative;
-      gap: 3rem;
-      padding: 2rem;
-      &--pic {
-        width: 8rem;
-      }
-      &--nav {
-        column-gap: 6rem;
-      }
-      &--context {
-        justify-content: start;
-        position: absolute;
-        bottom: -5rem;
-        right: 2rem;
-      }
-    }
-    @include respond(phone) {
-      &--nav {
-        grid-template-columns: 1fr;
-        row-gap: 2.5rem;
-      }
-      &--context {
-        justify-content: start;
-        position: absolute;
-        bottom: -5rem;
-        left: 2rem;
       }
     }
   }

@@ -1,0 +1,120 @@
+.footer {
+    &__content {
+        @include flexCenterStart(center, start);
+        gap: 8rem;
+        max-width: 110rem;
+        margin: 0 auto;
+        &--pic {
+          width: 6rem;
+        }
+        &--nav {
+          flex: 1;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap: 3rem;
+          &__items {
+            list-style-type: none;
+          }
+          &__heading {
+            font-size: 1.6rem;
+            font-weight: bold;
+    
+            @include respond(tab-port) { 
+              font-size: 2rem;
+            }
+          }
+          &__links {
+            font-size: 1.4rem;
+            color: black;
+            @include respond(tab-port) { 
+              font-size: 1.7rem;
+            }
+          }
+        }
+        &--context {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          &__btn {
+            padding: 0.5rem 1rem;
+            font-size: 1.8rem;
+            background-color: $color-primary;
+    
+            &:hover {
+              background-color: $color-primary-light;
+            }
+          }
+    
+          @include respond(tab-port) { 
+            font-size: 2rem;
+          }
+        }
+    
+        @include respond(tab-port) {
+          flex-direction: column;
+          position: relative;
+          gap: 3rem;
+          @include fullWidthMargin;
+          &--pic {
+            width: 8rem;
+          }
+          &--nav {
+            column-gap: 6rem;
+          }
+          &--context {
+            justify-content: start;
+            position: absolute;
+            bottom: -5rem;
+            right: 2rem;
+          }
+        }
+        @include respond(phone) {
+          &--nav {
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+          }
+          &--context {
+            justify-content: start;
+            position: static;
+          }
+        }
+      }
+
+    &__bottom {
+        @include flexCenterStart(space-between, center);
+        max-width: 110rem;
+        margin: 0 auto;
+        margin-top: 5rem;
+
+        &--links {
+            @include flexCenterStart(start,center);
+            gap: 1.2rem;
+            &__svg {
+                width: 2rem;
+            }
+        }
+
+        @include respond(tab-port) {
+            @include fullWidthMargin;
+            margin-top: 8rem;
+
+            p {
+                font-size: 2rem;
+            }
+
+            &--links { 
+                &__svg {
+                    width: 2.5rem;
+                }
+            }
+        }
+
+        @include respond(phone) { 
+            display: block;
+            margin-top: 0;
+            &--links { 
+                margin-top: 1.3rem;
+            }
+        }
+    }
+}
