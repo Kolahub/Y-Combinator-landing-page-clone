@@ -1,3 +1,19 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
+@keyframes typing {
+  from {
+    width: 0; } }
+
+@keyframes blink {
+  50% {
+    border-color: transparent; } }
+
 *,
 *::after,
 *::before {
@@ -100,7 +116,10 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .navigation__lists.active .tooltip {
-    max-height: 35rem; } }
+    max-height: 35rem;
+    animation: fade 1s ease-in; }
+  .navigation__lists.active .navigation__arrow {
+    transform: rotate(180deg); } }
 
 .iframe__box {
   max-width: 70rem;
@@ -281,7 +300,8 @@ body {
       top: 0;
       transform: rotate(-135deg); }
     .navigation__arrow {
-      display: block; } }
+      display: block;
+      transition: transform .5 ease-in; } }
 
 .topThree {
   display: grid;

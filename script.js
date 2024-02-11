@@ -1,15 +1,12 @@
-const dropdownArrow = document.querySelectorAll('.navigation__lists')
-const tooltTip = document.querySelectorAll('.tooltip')
-let activeAccordion = null;
+const listBtns = document.querySelectorAll('.navigation__lists')
 
-dropdownArrow.forEach(arrow => {
-    arrow.addEventListener('click', function () {
-        dropdownArrow.forEach(function(item) {
-            if (item !==  arrow) {
+listBtns.forEach(listBtn => {
+    listBtn.addEventListener('click', function () {
+        listBtns.forEach(function(item) {
+            if (item !==  listBtn) {
                 item.classList.remove('active')
             }
         })
-        arrow.classList.toggle('active');
+        listBtn.classList.toggle('active');
     });
-        console.log('helooo')
     })

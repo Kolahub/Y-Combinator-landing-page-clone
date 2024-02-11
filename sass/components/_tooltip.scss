@@ -48,6 +48,9 @@
 @include respond(phone) {
 .navigation__lists.active .tooltip {
     max-height: 35rem;
-
+    animation: fade 1s ease-in;
+}
+.navigation__lists.active .navigation__arrow {
+    transform: rotate(180deg);
 }
 }

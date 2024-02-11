@@ -160,6 +160,7 @@
 
     &__arrow {
       display: block;
+      transition: transform .5 ease-in;
     }
   }
 }
