@@ -13,29 +13,32 @@ body {
     text-align: center;
     font-size: 3rem;
   }
-
-  @include respond (phone-port) {  
-    margin: 5rem auto 0 auto;
+  @include respond (tab-port) { 
+    font-size: 4rem;
   }
 }
 
 .heading__ter {
-  max-width: 64rem;
+  max-width: 60rem;
   margin: 0 auto 4rem auto;
 
   &--text {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 1.4;
   }
   @include respond (tab-port) { 
+    max-width: 75rem;
+    &--text {
     @include fullWidthMargin;
-    margin: 0 auto 4rem auto;
-  }
-  @include respond (phone-port) { 
-    &--text { 
-      font-size: 3.2rem;
+    font-size: 3.8rem;
     }
+  }
+  @include respond (phone) { 
+    max-width: 100%;
+    &--text {
+      font-size: 3.6rem;
+      }
   }
 } 
 

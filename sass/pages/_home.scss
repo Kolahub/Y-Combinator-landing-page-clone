@@ -30,20 +30,6 @@
 
 .runby {
     padding: 8rem 0;
-    &__heading {
-        max-width: 70rem;
-        @include respond(tab-port) {
-            &--text {
-                font-size: 3.5rem;
-            }
-            max-width: 75rem;
-        }
-
-        @include respond(phone-port) { 
-            max-width: 44rem;
-        }
-    }
-
 }
 
 .priority {

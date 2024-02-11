@@ -112,7 +112,7 @@
         @include respond (tab-port) { 
             padding: .8rem 2rem; 
             width: 40%;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
         }
         @include respond (phone) {  
             width: calc(100% / 2.5);
@@ -120,9 +120,9 @@
         @include respond (phone-port) { 
             width: calc(100% / 2);
         }
-        @media only screen and (max-width: 18.75em) { 
-            font-size: 1.5rem; 
-            width: 12rem;
+        @media only screen and (max-width: 20.375em) { 
+            font-size: 1.8rem; 
+            width: 14rem;
         }
     }
 

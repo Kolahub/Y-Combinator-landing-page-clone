@@ -51,25 +51,29 @@ body {
   .heading__sec--text {
     text-align: center;
     font-size: 3rem; }
-  @media only screen and (max-width: 28.125em) {
+  @media only screen and (max-width: 56.25em) {
     .heading__sec {
-      margin: 5rem auto 0 auto; } }
+      font-size: 4rem; } }
 
 .heading__ter {
-  max-width: 64rem;
+  max-width: 60rem;
   margin: 0 auto 4rem auto; }
   .heading__ter--text {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 1.4; }
   @media only screen and (max-width: 56.25em) {
     .heading__ter {
-      width: calc(100% - 4rem);
-      margin: 0 2rem;
-      margin: 0 auto 4rem auto; } }
-  @media only screen and (max-width: 28.125em) {
-    .heading__ter--text {
-      font-size: 3.2rem; } }
+      max-width: 75rem; }
+      .heading__ter--text {
+        width: calc(100% - 4rem);
+        margin: 0 2rem;
+        font-size: 3.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading__ter {
+      max-width: 100%; }
+      .heading__ter--text {
+        font-size: 3.6rem; } }
 
 @media only screen and (max-width: 56.25em) {
   .priority__heading--text {
@@ -353,11 +357,11 @@ body {
       color: #458ad2; }
       @media only screen and (max-width: 56.25em) {
         .topThree--box h3 {
-          font-size: 2.1rem;
+          font-size: 2.2rem;
           line-height: 1.2; } }
     @media only screen and (max-width: 56.25em) {
       .topThree--box p {
-        font-size: 1.9rem;
+        font-size: 2rem;
         margin-top: 1rem; } }
   @media only screen and (max-width: 56.25em) {
     .topThree {
@@ -801,17 +805,17 @@ body {
     .home__btn {
       padding: .8rem 2rem;
       width: 40%;
-      font-size: 2.2rem; } }
+      font-size: 2.5rem; } }
   @media only screen and (max-width: 37.5em) {
     .home__btn {
       width: calc(100% / 2.5); } }
   @media only screen and (max-width: 28.125em) {
     .home__btn {
       width: calc(100% / 2); } }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 20.375em) {
     .home__btn {
-      font-size: 1.5rem;
-      width: 12rem; } }
+      font-size: 1.8rem;
+      width: 14rem; } }
 
 .home__label {
   text-align: center;
@@ -960,16 +964,6 @@ body {
 
 .runby {
   padding: 8rem 0; }
-  .runby__heading {
-    max-width: 70rem; }
-    @media only screen and (max-width: 56.25em) {
-      .runby__heading {
-        max-width: 75rem; }
-        .runby__heading--text {
-          font-size: 3.5rem; } }
-    @media only screen and (max-width: 28.125em) {
-      .runby__heading {
-        max-width: 44rem; } }
 
 .priority {
   padding: 8rem 0;
