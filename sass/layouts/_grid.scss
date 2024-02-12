@@ -89,6 +89,21 @@
     &--child {
       position: relative;
       padding: 0.5rem 2rem;
+      &:nth-child(1) {
+        border-left: 0.4rem solid $color-primary;
+        font-weight: bolder;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        height: 12rem;
+    
+        @include respond(tab-port) {
+          font-size: 2.3rem;
+          height: 16rem;
+        }
+        @media only screen and (max-width: 31.35em) {
+          height: auto;
+        }
+      }
       &:not(:first-child) {
         margin-top: 3rem;
       }
@@ -131,21 +146,6 @@
       row-gap: 4rem;
     }
   }
-  &__one &__one--child:nth-child(-n + 1) {
-    border-left: 0.4rem solid $color-primary;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    height: 12rem;
-
-    @include respond(tab-port) {
-      font-size: 2.3rem;
-      height: 16rem;
-    }
-    @media only screen and (max-width: 31.35em) {
-      height: auto;
-    }
-  }
 
   &__two {
     display: grid;
@@ -154,6 +154,23 @@
     &--child {
       position: relative;
       padding: 0.5rem 2rem;
+      &:nth-child(1) {
+        border-left: 0.4rem solid $color-primary;
+        font-weight: bolder;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        height: 12rem;
+    
+        @include respond(tab-port) {
+          font-size: 2.3rem;
+          margin-top: 3rem;
+          height: 15rem;
+        }
+    
+        @media only screen and (max-width: 31.35em) {
+          height: auto;
+        }
+      }
       &:not(:first-child) {
         margin-top: 3rem;
       }
@@ -193,23 +210,6 @@
 
     @media only screen and (max-width: 31.35em) {
       grid-template-columns: 1fr;
-    }
-  }
-  &__two &__two--child:nth-child(-n + 1) {
-    border-left: 0.4rem solid $color-primary;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    height: 12rem;
-
-    @include respond(tab-port) {
-      font-size: 2.3rem;
-      margin-top: 3rem;
-      height: 15rem;
-    }
-
-    @media only screen and (max-width: 31.35em) {
-      height: auto;
     }
   }
 
