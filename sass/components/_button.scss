@@ -3,4 +3,8 @@
     font-weight: 600;
     color: $color-white;
     text-decoration: none;
+
+    &:hover {
+        color: $color-white !important;
+    }
 }

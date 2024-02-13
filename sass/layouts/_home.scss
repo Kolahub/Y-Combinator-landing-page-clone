@@ -1,7 +1,6 @@
 .home {
   position: relative;
   &__content {
-    @include flexCenterStart(end, center);
     height: 100%;
   }
   &__typography {
@@ -85,10 +84,6 @@
       height: 100%;
       object-fit: cover;
     }
-
-    @media only screen and (max-width: 48em) {
-      display: none;
-    }
   }
 
   &__btn {
@@ -117,7 +112,7 @@
     @include respond(phone-port) {
       width: calc(100% / 2);
     }
-    @media only screen and (max-width: 20.375em) {
+    @media only screen and (max-width: 20.625em) {
       font-size: 1.8rem;
       width: 14rem;
     }

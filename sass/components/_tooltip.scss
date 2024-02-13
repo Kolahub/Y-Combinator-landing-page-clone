@@ -1,4 +1,4 @@
-.tooltip {
+.tooltipp {
     position: absolute;
     top: 100%;
     background-color: $color-white;
@@ -46,7 +46,7 @@
 }
 
 @include respond(phone) {
-.navigation__lists.active .tooltip {
+.navigation__lists.active .tooltipp {
     max-height: 35rem;
     animation: fade 1s ease-in;
 }

@@ -84,8 +84,10 @@ body {
   font-weight: 600;
   color: #ffffff;
   text-decoration: none; }
+  .btn:hover {
+    color: #ffffff !important; }
 
-.tooltip {
+.tooltipp {
   position: absolute;
   top: 100%;
   background-color: #ffffff;
@@ -97,20 +99,20 @@ body {
   list-style-type: none;
   z-index: 1;
   transform: display 3s; }
-  .tooltip__lists {
+  .tooltipp__lists {
     height: 3rem;
     line-height: .3rem;
     padding: 2rem; }
-    .tooltip__lists:hover {
+    .tooltipp__lists:hover {
       background-color: #f5f5ee; }
-  .tooltip__links {
+  .tooltipp__links {
     text-decoration: none;
     color: black; }
   @media only screen and (max-width: 56.25em) {
-    .tooltip__links {
+    .tooltipp__links {
       font-size: 1.9rem; } }
   @media only screen and (max-width: 37.5em) {
-    .tooltip {
+    .tooltipp {
       display: block;
       background-color: transparent;
       box-shadow: none;
@@ -119,11 +121,11 @@ body {
       overflow: hidden;
       padding: 0;
       transition: all 1.4s ease; }
-      .tooltip__lists {
+      .tooltipp__lists {
         height: 0; } }
 
 @media only screen and (max-width: 37.5em) {
-  .navigation__lists.active .tooltip {
+  .navigation__lists.active .tooltipp {
     max-height: 35rem;
     animation: fade 1s ease-in; }
   .navigation__lists.active .navigation__arrow {
@@ -710,9 +712,6 @@ body {
 .home {
   position: relative; }
   .home__content {
-    display: flex;
-    justify-content: end;
-    align-items: center;
     height: 100%; }
   .home__typography {
     width: 55%;
@@ -784,9 +783,6 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-    @media only screen and (max-width: 48em) {
-      .home__img {
-        display: none; } }
   .home__btn {
     display: block;
     font-size: 2rem;
@@ -810,7 +806,7 @@ body {
     @media only screen and (max-width: 28.125em) {
       .home__btn {
         width: calc(100% / 2); } }
-    @media only screen and (max-width: 20.375em) {
+    @media only screen and (max-width: 20.625em) {
       .home__btn {
         font-size: 1.8rem;
         width: 14rem; } }
