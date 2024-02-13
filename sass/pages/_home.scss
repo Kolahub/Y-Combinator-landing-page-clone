@@ -1,70 +1,70 @@
 .home {
-    padding-top: 8rem;
-    height: 90vh;
-    @include respond  (tab-port) {
-        height: 70vh;
-    }
+  margin-top: 8rem;
+  height: 55rem;
+  @media only screen and (max-width: 46em) {
+    height: 50rem;
+  }
 
-    @media only screen and (max-width: 20em) {   
-        height: 90vh;
-    }
+//   @media only screen and (max-width: 20em) {
+//     height: 90vh;
+//   }
 
-    @media only screen and (max-width: 18.75em) {  
-        height: 60vh;
-    }
+//   @media only screen and (max-width: 18.75em) {
+//     height: 60vh;
+//   }
 }
 
 .companies {
-    padding: 8rem 0;
-    margin-top: -1.7rem;
-    background-color: $color-grey-light;
+  padding: 7rem 0;
+  margin-top: -1.7rem;
+  background-color: $color-grey-light;
 }
 
 .founders {
-    padding: 6rem 0;
+  padding: 6rem 0;
 }
 .formula {
-    padding: 8rem 0;
-    background-color: $color-grey-light;
+  padding: 8rem 0;
+  background-color: $color-grey-light;
 }
 
 .runby {
-    padding: 8rem 0;
+  padding: 8rem 0;
 }
 
 .priority {
-    padding: 8rem 0;
-    background-color: $color-grey-light;
+  padding: 8rem 0;
+  background-color: $color-grey-light;
 }
 
 .worth {
-    padding: 8rem 0;
+  padding: 8rem 0;
 
-    &__info {
-        text-align: center;
+  &__info {
+    text-align: center;
 
-        p {
-            font-size: 2rem;
-            padding-top: 2rem;
-            font-weight: 400;
-        }
+    p {
+      font-size: 2rem;
+      padding-top: 2rem;
+      font-weight: 400;
     }
+  }
 }
 
 .community {
-    padding: 6rem 0;
-    background-color: $color-grey-light;
+  padding: 6rem 0;
+  background-color: $color-grey-light;
 }
 
 .lastest {
-    padding: 8rem 0;
+  padding: 8rem 0;
 }
 
 .intersted {
-    padding: 8rem 0;
-    background-color: $color-grey-light;
+  padding: 8rem 0;
+  background-color: $color-grey-light;
 }
 .footer {
-    padding:5rem 0 8rem 0;
-    background-color: $color-grey-light;
+  padding: 5rem 0 8rem 0;
+  background-color: $color-grey-light;
 }

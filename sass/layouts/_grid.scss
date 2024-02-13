@@ -227,9 +227,9 @@
   display: grid;
   max-width: 110rem;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-  column-gap: 3.5rem;
-  row-gap: 10rem;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
   p { 
     margin-top: 1.2rem;
   }
@@ -259,18 +259,19 @@
 
     @include respond(tab-port) {
       h3 {
-        font-size: 2.1rem;
+        font-size: 2rem;
       }
       p {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
   }
-
-  @media only screen and (max-width: 48.125em) {
+  @include respond(tab-port) { 
+    @include fullWidthMargin;
+  }
+  @media only screen and (max-width: 46.875em) {
     display: flex;
     flex-direction: column;
-    @include fullWidthMargin;
   }
 }
 

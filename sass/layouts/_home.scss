@@ -1,159 +1,156 @@
 .home {
-    &__content {
-        @include flexCenterStart(end, center);
-        position: relative;
-
-        @include respond(tab-port) {
-            height: 100%;
-            display: block;
-          }
+  position: relative;
+  &__content {
+    @include flexCenterStart(end, center);
+    height: 100%;
+  }
+  &__typography {
+    width: 55%;
+    max-width: 63rem;
+    @include respond(tab-land) {
+      padding-left: 3.5rem;
     }
-    &__typography {
-        width: 50%;
-        max-width: 55rem;
-        @include respond(tab-land) {
-            padding-left: 3.5rem;
-          }
-          @include respond(tab-port) {
-            @include customAbsolutePosition (50%, 50%);
-            width: 60%;
-            padding-left: 0;
-            margin-top: -1.5rem;
-          }
-          @include respond (phone) { 
-            @include fullWidthMargin;
-            margin-top: -1rem;
-          }
-        h1 {
-            font-size: 5.5rem;
-            color: $color-primary;
-            &:first-child {
-                margin-bottom: -3rem;
-                color: $color-black;
-                font-size: 6rem;
-            }
-
-            @include respond(tab-port) {
-                font-size: 6.5rem;
-                &:first-child {
-                    font-size: 7rem;
-                }
-              }
-
-              @include respond (phone) {
-                font-size: 5rem;
-                &:first-child {
-                    font-size: 6rem;
-                }
-            }
-
-            @include respond (phone-port) {
-                font-size: 4.5rem;
-                &:first-child {
-                    font-size: 5.5rem;
-                }
-            }
-            @media only screen and (max-width: 18.75em) {  
-                font-size: 3.5rem;
-                &:first-child {
-                    margin-bottom: -2rem;
-                    font-size: 4.5rem;
-                }
-            }
-        }
-        P {
-            font-size: 2.6rem;
-            line-height: 1.5;
-
-            span {
-                display: block;
-            }
-            @include respond (tab-port) {  
-                font-size: 3rem;
-            }
-            @media only screen and (max-width: 22em) { 
-                font-size: 2.5rem;
-            }
-            @media only screen and (max-width: 18.75em) {  
-                font-size: 2rem;
-            }
-        }
+    @media only screen and (max-width: 48em) {
+      @include customAbsolutePosition(50%, 50%);
+      width: 60%;
+      padding-left: 0rem;
+      margin-top: -1.5rem;
     }
-
-    &__img {
-        width: 50%;
-        z-index: -1;
-        img {
-            width: 100%;
-            height: calc(100vh - 17rem);
-            object-fit: cover;
-        }
-
-        @include respond(tab-port) {
-            display: none;
-          }
+    @include respond(phone) {
+      @include fullWidthMargin;
+      margin-top: -1rem;
     }
+    h1 {
+      font-size: 5.5rem;
+      color: $color-primary;
+      &:first-child {
+        margin-bottom: -3rem;
+        color: $color-black;
+        font-size: 6rem;
+      }
 
-    &__btn {
+      @media only screen and (max-width: 48em) {
+        font-size: 6.5rem;
+        &:first-child {
+          font-size: 7rem;
+        }
+      }
+
+      @include respond(phone) {
+        font-size: 5rem;
+        &:first-child {
+          font-size: 6rem;
+        }
+      }
+
+      @include respond(phone-port) {
+        font-size: 4.5rem;
+        &:first-child {
+          font-size: 5.5rem;
+        }
+      }
+      @media only screen and (max-width: 18.75em) {
+        font-size: 3.5rem;
+        &:first-child {
+          margin-bottom: -2rem;
+          font-size: 4.5rem;
+        }
+      }
+    }
+    P {
+      font-size: 2.6rem;
+      line-height: 1.5;
+
+      span {
         display: block;
+      }
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
+      @media only screen and (max-width: 22em) {
+        font-size: 2.5rem;
+      }
+      @media only screen and (max-width: 18.75em) {
         font-size: 2rem;
-        text-align: center;
-        width: 35%;
-        padding: .6rem 2rem;
-        margin-top: 2rem;
-        background-color: $color-primary-light;
-        cursor: pointer;
-        transition: all .3s;
-        
-        &:hover{
-            background-color: $color-primary;
-        }
+      }
+    }
+  }
 
-        @include respond (tab-port) { 
-            padding: .8rem 2rem; 
-            width: 40%;
-            font-size: 2.5rem;
-        }
-        @include respond (phone) {  
-            width: calc(100% / 2.5);
-        }
-        @include respond (phone-port) { 
-            width: calc(100% / 2);
-        }
-        @media only screen and (max-width: 20.375em) { 
-            font-size: 1.8rem; 
-            width: 14rem;
-        }
+  &__img {
+    width: 45%;
+    z-index: -1;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    &__label {
-        text-align: center;
-        @include customAbsolutePosition (50%, 50%);
-        z-index: -1;
-
-        &--con {
-            background-color: $color-grey-light;
-            height: 13rem;
-            width: 22rem;
-            padding: 2rem 2.5rem;
-            box-shadow: 0 1rem 2rem rgba($color-black, $alpha: .2);
-            border-radius: 1.2rem;
-
-            &:first-child {
-                margin-bottom: 2rem;
-            }
-
-            h1 {
-                color: $color-primary;
-                font-size: 3.5rem;
-            }
-            p {
-                margin-top: -.5rem;
-            }
-        }
-
-        @include respond(tab-port) {
-            display: none;
-          }
+    @media only screen and (max-width: 48em) {
+      display: none;
     }
+  }
+
+  &__btn {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    width: 35%;
+    padding: 0.6rem 2rem;
+    margin-top: 2rem;
+    background-color: $color-primary-light;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+
+    @media only screen and (max-width: 48em) {
+      padding: 0.8rem 2rem;
+      width: 40%;
+      font-size: 2.5rem;
+    }
+    @include respond(phone) {
+      width: calc(100% / 2.5);
+    }
+    @include respond(phone-port) {
+      width: calc(100% / 2);
+    }
+    @media only screen and (max-width: 20.375em) {
+      font-size: 1.8rem;
+      width: 14rem;
+    }
+  }
+
+  &__label {
+    text-align: center;
+    @include customAbsolutePosition(53%, 55%);
+    z-index: -1;
+
+    &--con {
+      background-color: $color-grey-light;
+      height: 13rem;
+      width: 22rem;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.2);
+      border-radius: 1.2rem;
+
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        color: $color-primary;
+        font-size: 3.5rem;
+      }
+      p {
+        margin-top: -0.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 48em) {
+      display: none;
+    }
+  }
 }
