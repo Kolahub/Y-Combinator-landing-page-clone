@@ -14,6 +14,8 @@
           column-gap: 3rem;
           &__items {
             list-style-type: none;
+            overflow: hidden;
+            padding-left:  0;
           }
           &__heading {
             font-size: 1.6rem;

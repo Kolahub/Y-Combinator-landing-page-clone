@@ -429,8 +429,6 @@ body {
         @media only screen and (max-width: 31.35em) {
           .purpose__one--child:nth-child(1) {
             height: auto; } }
-      .purpose__one--child:not(:first-child) {
-        margin-top: 3rem; }
       .purpose__one--child h4 {
         width: 16rem;
         line-height: 1.5; }
@@ -480,8 +478,6 @@ body {
         @media only screen and (max-width: 31.35em) {
           .purpose__two--child:nth-child(1) {
             height: auto; } }
-      .purpose__two--child:not(:first-child) {
-        margin-top: 3rem; }
       .purpose__two--child h4 {
         width: 16rem;
         line-height: 1.5; }
@@ -850,7 +846,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem; }
     .footer__content--nav__items {
-      list-style-type: none; }
+      list-style-type: none;
+      overflow: hidden;
+      padding-left: 0; }
     .footer__content--nav__heading {
       font-size: 1.6rem;
       font-weight: bold; }
